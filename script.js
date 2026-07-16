@@ -252,28 +252,25 @@ window.addEventListener("load", () => {
 
     const hero = document.querySelector(".hero");
 
-    hero.animate([
+    if(hero){
 
-        {
-            opacity: 0,
-            transform: "translateY(30px)"
-        },
+        hero.animate([
+            {
+                opacity:0,
+                transform:"translateY(30px)"
+            },
+            {
+                opacity:1,
+                transform:"translateY(0)"
+            }
+        ],{
+            duration:1200,
+            fill:"forwards"
+        });
 
-        {
-            opacity: 1,
-            transform: "translateY(0)"
-        }
-
-    ], {
-
-        duration: 1200,
-
-        fill: "forwards"
-
-    });
+    }
 
 });
-
 
 // =============================
 // Console Message

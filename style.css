@@ -208,3 +208,83 @@ nav ul{display:none;}
 .developer{grid-template-columns:1fr;text-align:center;}
 .arrow{display:none;}
 }
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+.hero-left{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    background:#ffffff20;
+    padding:10px 20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    width:fit-content;
+}
+
+.hero-buttons{
+    margin-top:20px;
+}
+
+.gallery-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.gallery img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.gallery-info{
+    padding:20px;
+}
+
+.download-box{
+    max-width:800px;
+    margin:auto;
+}
+
+.footer-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:20px 0;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.developer-left,
+.developer-right{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.technologies{
+    background:#f3f5fb;
+}
