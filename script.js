@@ -1,38 +1,89 @@
-/* ==========================================
-   PHILANTHROLINK WEB AD
-========================================== */
+// =============================
+// PHILANTHROLINK LANDING PAGE
+// =============================
 
-// ===============================
-// Smooth Navigation
-// ===============================
-
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function(e){
-
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({
+        const target = document.querySelector(this.getAttribute("href"));
 
-                behavior:"smooth"
-
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
             });
+        }
+    });
+});
+
+
+// =============================
+// Navbar Shadow
+// =============================
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+
+        navbar.classList.add("nav-shadow");
+
+    } else {
+
+        navbar.classList.remove("nav-shadow");
+
+    }
+
+});
+
+
+// =============================
+// Active Navigation
+// =============================
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active-link");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active-link");
+
+        }
 
     });
 
 });
 
 
-// ===============================
-// Fade In Sections
-// ===============================
+// =============================
+// Fade In Animation
+// =============================
 
-const observer = new IntersectionObserver(entries=>{
+const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
 
@@ -40,11 +91,13 @@ const observer = new IntersectionObserver(entries=>{
 
     });
 
-},{
-    threshold:0.2
+}, {
+
+    threshold: 0.15
+
 });
 
-document.querySelectorAll("section").forEach(section=>{
+document.querySelectorAll("section").forEach(section => {
 
     section.classList.add("hidden");
 
@@ -53,67 +106,29 @@ document.querySelectorAll("section").forEach(section=>{
 });
 
 
-// ===============================
-// Active Navigation Highlight
-// ===============================
+// =============================
+// Screenshot Lightbox
+// =============================
 
-const sections=document.querySelectorAll("section");
-const navLinks=document.querySelectorAll("nav ul li a");
+const galleryImages = document.querySelectorAll(".gallery img");
 
-window.addEventListener("scroll",()=>{
+const lightbox = document.createElement("div");
 
-    let current="";
-
-    sections.forEach(section=>{
-
-        const top=section.offsetTop-120;
-
-        if(pageYOffset>=top){
-
-            current=section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#"+current){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-// ===============================
-// Image Lightbox
-// ===============================
-
-const images=document.querySelectorAll(".gallery img");
-
-const lightbox=document.createElement("div");
-
-lightbox.id="lightbox";
+lightbox.id = "lightbox";
 
 document.body.appendChild(lightbox);
 
-images.forEach(image=>{
+galleryImages.forEach(image => {
 
-    image.addEventListener("click",()=>{
+    image.addEventListener("click", () => {
 
         lightbox.classList.add("active");
 
-        const img=document.createElement("img");
+        const img = document.createElement("img");
 
-        img.src=image.src;
+        img.src = image.src;
 
-        while(lightbox.firstChild){
+        while (lightbox.firstChild) {
 
             lightbox.removeChild(lightbox.firstChild);
 
@@ -125,104 +140,151 @@ images.forEach(image=>{
 
 });
 
-lightbox.addEventListener("click",()=>{
+lightbox.addEventListener("click", () => {
 
     lightbox.classList.remove("active");
 
 });
 
 
-// ===============================
-// Button Ripple Effect
-// ===============================
+// =============================
+// Floating Phone Animation
+// =============================
 
-const buttons=document.querySelectorAll(".btn");
+const phone = document.querySelector(".phone");
 
-buttons.forEach(button=>{
+if (phone) {
 
-button.addEventListener("click",function(e){
+    let direction = 1;
 
-const x=e.clientX-this.offsetLeft;
+    setInterval(() => {
 
-const y=e.clientY-this.offsetTop;
+        direction *= -1;
 
-const ripple=document.createElement("span");
+        phone.animate([
+            {
+                transform: "translateY(0px)"
+            },
+            {
+                transform: `translateY(${direction * 10}px)`
+            }
+        ], {
 
-ripple.style.left=x+"px";
+            duration: 2000,
+            fill: "forwards"
 
-ripple.style.top=y+"px";
+        });
 
-ripple.classList.add("ripple");
-
-this.appendChild(ripple);
-
-setTimeout(()=>{
-
-ripple.remove();
-
-},600);
-
-});
-
-});
-
-
-// ===============================
-// Hero Text Animation
-// ===============================
-
-window.addEventListener("load",()=>{
-
-const hero=document.querySelector(".hero-content");
-
-hero.style.opacity="0";
-
-hero.style.transform="translateY(40px)";
-
-setTimeout(()=>{
-
-hero.style.transition="1.2s";
-
-hero.style.opacity="1";
-
-hero.style.transform="translateY(0px)";
-
-},300);
-
-});
-
-
-// ===============================
-// Navbar Shadow
-// ===============================
-
-window.addEventListener("scroll",()=>{
-
-const nav=document.querySelector("nav");
-
-if(window.scrollY>50){
-
-nav.style.boxShadow="0 5px 20px rgba(0,0,0,.3)";
-
-}else{
-
-nav.style.boxShadow="none";
+    }, 2000);
 
 }
 
+
+// =============================
+// Feature Card Hover Animation
+// =============================
+
+const cards = document.querySelectorAll(
+    ".feature-card,.trust-box,.gallery-card,.tech-card,.step"
+);
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-10px)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "translateY(0px)";
+
+    });
+
 });
 
 
-// ===============================
-// Console Welcome
-// ===============================
+// =============================
+// Scroll To Top Button
+// =============================
+
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "↑";
+
+topButton.id = "topBtn";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+// =============================
+// Hero Animation
+// =============================
+
+window.addEventListener("load", () => {
+
+    const hero = document.querySelector(".hero");
+
+    hero.animate([
+
+        {
+            opacity: 0,
+            transform: "translateY(30px)"
+        },
+
+        {
+            opacity: 1,
+            transform: "translateY(0)"
+        }
+
+    ], {
+
+        duration: 1200,
+
+        fill: "forwards"
+
+    });
+
+});
+
+
+// =============================
+// Console Message
+// =============================
 
 console.log(
-"%cWelcome to PhilanthroLink!",
-"color:#673AB7;font-size:22px;font-weight:bold;"
+    "%cWelcome to PhilanthroLink!",
+    "color:#5E35B1;font-size:20px;font-weight:bold;"
 );
 
 console.log(
-"%cDeveloped by Prudhvi Prasad Sikharam",
-"color:#1976D2;font-size:14px;"
+    "%cDeveloped by Prudhvi Prasad Sikharam",
+    "color:#1976D2;font-size:14px;"
 );

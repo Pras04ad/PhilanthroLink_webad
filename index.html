@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,121 +10,143 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- ================= NAVIGATION ================= -->
 
-<header class="hero">
+<nav>
 
-    <nav>
-        <h2 class="logo">PhilanthroLink</h2>
+    <div class="logo">
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#screenshots">Screenshots</a></li>
-            <li><a href="#developer">Developer</a></li>
-        </ul>
-    </nav>
+        <i class="fa-solid fa-hand-holding-heart"></i>
 
-    <div class="hero-content">
-
-        <h1>PhilanthroLink</h1>
-
-        <h2>Connecting NGOs & Volunteers</h2>
-
-        <p>
-            A secure Android application that connects NGOs and volunteers,
-            enabling real-time donation management, QR verification,
-            community reviews, and live Firebase-powered updates.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="PhilanthroLink.apk" download class="btn">
-                <i class="fa-solid fa-download"></i>
-                Download APK
-            </a>
-
-            <a href="#features" class="btn btn2">
-                Explore Features
-            </a>
-
-        </div>
+        PhilanthroLink
 
     </div>
 
-</header>
+    <ul>
 
-<!-- ================= ABOUT ================= -->
+        <li><a href="#about">About</a></li>
 
-<section id="about" class="about">
+        <li><a href="#features">Features</a></li>
 
-<div class="container">
+        <li><a href="#workflow">Workflow</a></li>
 
-<h2>About PhilanthroLink</h2>
+        <li><a href="#screenshots">Screenshots</a></li>
 
-<p>
+        <li><a href="#developer">Developer</a></li>
 
-PhilanthroLink is an Android application designed to bridge the gap between
-Non-Governmental Organizations (NGOs) and Volunteers.
+    </ul>
 
-Organizations can publish donation requests while volunteers discover NGOs,
-view live requirements, donate resources, scan QR codes, and participate
-through a transparent review system.
+</nav>
 
-Built using Kotlin, Firebase Authentication and Firebase Realtime Database,
-the application provides a modern platform for efficient donation management.
+<!-- ================= HERO ================= -->
 
-</p>
+<section class="hero">
+
+<div class="hero-left">
+
+    <span class="tag">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        Android Donation Platform
+
+    </span>
+
+    <h1>
+
+        Connecting NGOs
+        <br>
+
+        <span> & Volunteers</span>
+
+    </h1>
+
+    <p>
+
+        PhilanthroLink is a secure Android application that enables NGOs and
+        Volunteers to collaborate through real-time donation management,
+        Firebase integration, QR verification, community reviews, and
+        interactive statistics.
+
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="PhilanthroLink.apk"
+           download
+           class="primary-btn">
+
+           <i class="fa-solid fa-download"></i>
+
+           Download APK
+
+        </a>
+
+        <a href="#screenshots"
+           class="secondary-btn">
+
+           View Screens
+
+        </a>
+
+    </div>
+
+</div>
+
+<div class="hero-right">
+
+    <div class="phone">
+
+        <img src="images/Welcome Screen.png">
+
+    </div>
 
 </div>
 
 </section>
 
+<!-- ================= TRUST SECTION ================= -->
 
-<section class="why">
+<section class="trust">
 
-<h2>Why Choose PhilanthroLink?</h2>
+<div class="trust-box">
 
-<div class="feature-grid">
+<i class="fa-solid fa-user-shield"></i>
 
-<div class="card">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<h3>Secure Platform</h3>
+<h3>Secure Authentication</h3>
 
 <p>
 
-Firebase Authentication ensures secure access for NGOs and Volunteers.
+Firebase Authentication provides secure login and registration.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="trust-box">
 
-<i class="fa-solid fa-bolt"></i>
+<i class="fa-solid fa-cloud"></i>
 
-<h3>Real-Time Updates</h3>
+<h3>Real-Time Firebase</h3>
 
 <p>
 
-Donation requests, reviews, and statistics are synchronized instantly.
+Instant synchronization of requests and donations.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="trust-box">
 
 <i class="fa-solid fa-qrcode"></i>
 
@@ -131,21 +154,81 @@ Donation requests, reviews, and statistics are synchronized instantly.
 
 <p>
 
-Organizations can be identified quickly using QR technology.
+Quick NGO verification using QR technology.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="trust-box">
 
-<i class="fa-solid fa-heart"></i>
+<i class="fa-solid fa-star"></i>
 
-<h3>Community Driven</h3>
+<h3>Community Reviews</h3>
 
 <p>
 
-Reviews and transparent donations help build trust between NGOs and Volunteers.
+Transparent feedback between NGOs and Volunteers.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="title">
+
+<h2>About PhilanthroLink</h2>
+
+<p>
+
+A modern Android application designed to simplify charitable giving and
+volunteer engagement through a secure cloud-based platform.
+
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div>
+
+<h3>Mission</h3>
+
+<p>
+
+Provide a transparent digital platform where NGOs can request help and
+Volunteers can easily contribute resources.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Vision</h3>
+
+<p>
+
+To build stronger communities by making charitable giving simple,
+accessible, and transparent.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Technology</h3>
+
+<p>
+
+Built using Kotlin, Firebase Authentication,
+Firebase Realtime Database, and Material Design.
 
 </p>
 
@@ -159,91 +242,99 @@ Reviews and transparent donations help build trust between NGOs and Volunteers.
 
 <section id="features">
 
+<div class="title">
+
 <h2>Key Features</h2>
+
+<p>
+
+Everything required to manage donations in one Android application.
+
+</p>
+
+</div>
 
 <div class="feature-grid">
 
-<div class="card">
+<div class="feature-card">
 
-<i class="fas fa-hand-holding-heart"></i>
+<i class="fa-solid fa-hand-holding-heart"></i>
 
 <h3>Donation Requests</h3>
 
 <p>
 
-NGOs can publish donation requests for food, clothes, medicines and other
-essential resources.
+NGOs publish requests for food, clothes, medicine and essential items.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<i class="fas fa-users"></i>
+<i class="fa-solid fa-users"></i>
 
 <h3>Volunteer Portal</h3>
 
 <p>
 
-Volunteers can discover NGOs, browse requests and contribute to charitable
-activities.
+Discover NGOs, browse requests and contribute resources.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<i class="fas fa-qrcode"></i>
+<i class="fa-solid fa-qrcode"></i>
 
 <h3>QR Verification</h3>
 
 <p>
 
-Quickly verify organizations using QR technology.
+Verify NGOs instantly through QR scanning.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<i class="fas fa-star"></i>
-
-<h3>Reviews</h3>
-
-<p>
-
-NGOs and Volunteers can review each other to improve transparency.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-chart-line"></i>
+<i class="fa-solid fa-chart-column"></i>
 
 <h3>Statistics</h3>
 
 <p>
 
-Real-time dashboards display completed, pending and received donations.
+Track completed, pending and received donations.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="feature-card">
 
-<i class="fas fa-lock"></i>
+<i class="fa-solid fa-comments"></i>
 
-<h3>Secure Authentication</h3>
+<h3>Reviews</h3>
 
 <p>
 
-Firebase Authentication ensures safe and secure access for all users.
+Two-way feedback improves transparency and trust.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Secure Login</h3>
+
+<p>
+
+Firebase Authentication protects every account.
 
 </p>
 
@@ -252,109 +343,112 @@ Firebase Authentication ensures safe and secure access for all users.
 </div>
 
 </section>
-<section class="workflow">
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="workflow">
+
+<div class="title">
 
 <h2>How PhilanthroLink Works</h2>
 
-<p class="workflow-subtitle">
-
-A complete end-to-end donation workflow powered by Firebase.
-
-</p>
-
-<div class="workflow-container">
-
-<div class="step">
-
-<div class="circle">1</div>
-
-<h3>Register</h3>
-
 <p>
 
-NGOs and Volunteers create secure accounts.
+From NGO registration to successful donation in six simple steps.
 
 </p>
 
 </div>
 
-<div class="arrow">➜</div>
+<div class="workflow">
 
 <div class="step">
 
-<div class="circle">2</div>
+<div class="step-number">1</div>
+
+<h3>NGO Registers</h3>
+
+<p>Create a secure NGO account.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">2</div>
 
 <h3>Create Request</h3>
 
-<p>
-
-NGOs publish donation requests.
-
-</p>
+<p>Publish donation requests.</p>
 
 </div>
 
-<div class="arrow">➜</div>
+<div class="arrow">
 
-<div class="step">
-
-<div class="circle">3</div>
-
-<h3>Discover NGOs</h3>
-
-<p>
-
-Volunteers browse organizations.
-
-</p>
+<i class="fa-solid fa-arrow-right"></i>
 
 </div>
 
-<div class="arrow">➜</div>
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Firebase</h3>
+
+<p>Requests are stored in the cloud.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
 
 <div class="step">
 
-<div class="circle">4</div>
+<div class="step-number">4</div>
+
+<h3>Volunteer</h3>
+
+<p>Browse NGOs and active requests.</p>
+
+</div>
+
+<div class="arrow">
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">5</div>
 
 <h3>Donate</h3>
 
-<p>
-
-Volunteers contribute requested resources.
-
-</p>
+<p>Submit donations securely.</p>
 
 </div>
 
-<div class="arrow">➜</div>
+<div class="arrow">
 
-<div class="step">
-
-<div class="circle">5</div>
-
-<h3>Firebase Updates</h3>
-
-<p>
-
-Requests and statistics update instantly.
-
-</p>
+<i class="fa-solid fa-arrow-right"></i>
 
 </div>
 
-<div class="arrow">➜</div>
-
 <div class="step">
 
-<div class="circle">6</div>
+<div class="step-number">6</div>
 
-<h3>Reviews</h3>
+<h3>Impact</h3>
 
-<p>
-
-Users leave reviews and improve transparency.
-
-</p>
+<p>Statistics update instantly.</p>
 
 </div>
 
@@ -365,53 +459,145 @@ Users leave reviews and improve transparency.
 
 <section id="screenshots">
 
+<div class="title">
+
 <h2>Application Screenshots</h2>
+
+<p>
+
+Explore the intuitive interface of PhilanthroLink and see how NGOs and
+Volunteers collaborate through a modern Android experience.
+
+</p>
+
+</div>
 
 <div class="gallery">
 
-<div class="image">
+<div class="gallery-card">
+
 <img src="images/Splash Screen.png" alt="Splash Screen">
-<h4>Splash Screen</h4>
+
+<div class="gallery-info">
+
+<h3>Splash Screen</h3>
+
+<p>Application startup with branded welcome screen.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
 <img src="images/Welcome Screen.png" alt="Welcome Screen">
-<h4>Welcome Screen</h4>
+
+<div class="gallery-info">
+
+<h3>Welcome Screen</h3>
+
+<p>Select your role as an NGO or Volunteer.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
 <img src="images/NGO Login.png" alt="NGO Login">
-<h4>NGO Login</h4>
+
+<div class="gallery-info">
+
+<h3>NGO Login</h3>
+
+<p>Secure Firebase Authentication for organizations.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
 <img src="images/NGO Dashboard.png" alt="NGO Dashboard">
-<h4>NGO Dashboard</h4>
+
+<div class="gallery-info">
+
+<h3>NGO Dashboard</h3>
+
+<p>Create donation requests and manage organization activities.</p>
+
 </div>
 
-<div class="image">
-<img src="images/NGO Statistics.png" alt="NGO Statistics">
-<h4>NGO Statistics</h4>
 </div>
 
-<div class="image">
-<img src="images/NGO Feedback.png" alt="NGO Feedback">
-<h4>NGO Feedback</h4>
+<div class="gallery-card">
+
+<img src="images/NGO Statistics.png" alt="Statistics">
+
+<div class="gallery-info">
+
+<h3>Statistics Dashboard</h3>
+
+<p>Track donation requests and organization performance.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
+<img src="images/NGO Feedback.png" alt="Feedback">
+
+<div class="gallery-info">
+
+<h3>Feedback</h3>
+
+<p>Manage community reviews and volunteer interactions.</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
 <img src="images/Volunteer Dashboard.png" alt="Volunteer Dashboard">
-<h4>Volunteer Dashboard</h4>
+
+<div class="gallery-info">
+
+<h3>Volunteer Dashboard</h3>
+
+<p>Access NGOs, donations, reviews and QR scanning.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
 <img src="images/Available NGOs.png" alt="Available NGOs">
-<h4>Available NGOs</h4>
+
+<div class="gallery-info">
+
+<h3>Available NGOs</h3>
+
+<p>Browse registered NGOs and view active donation requests.</p>
+
 </div>
 
-<div class="image">
+</div>
+
+<div class="gallery-card">
+
 <img src="images/Donation History.png" alt="Donation History">
-<h4>Donation History</h4>
+
+<div class="gallery-info">
+
+<h3>Donation History</h3>
+
+<p>Review your previous contributions in one place.</p>
+
+</div>
+
 </div>
 
 </div>
@@ -420,23 +606,96 @@ Users leave reviews and improve transparency.
 
 <!-- ================= TECHNOLOGIES ================= -->
 
-<section class="tech">
+<section class="technologies">
 
-<h2>Technologies Used</h2>
+<div class="title">
+
+<h2>Built Using Modern Technologies</h2>
+
+<p>
+
+Developed with industry-standard tools and cloud technologies.
+
+</p>
+
+</div>
 
 <div class="tech-grid">
 
-<div>Kotlin</div>
+<div class="tech-card">
 
-<div>Android Studio</div>
+<i class="fa-brands fa-android"></i>
 
-<div>Firebase Authentication</div>
+<h3>Android Studio</h3>
 
-<div>Firebase Realtime Database</div>
+</div>
 
-<div>Material Design</div>
+<div class="tech-card">
 
-<div>XML</div>
+<i class="fa-solid fa-code"></i>
+
+<h3>Kotlin</h3>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-fire"></i>
+
+<h3>Firebase</h3>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-database"></i>
+
+<h3>Realtime Database</h3>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Material Design</h3>
+
+</div>
+
+<div class="tech-card">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<h3>XML UI</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DOWNLOAD ================= -->
+
+<section class="download">
+
+<div class="download-box">
+
+<h2>Experience PhilanthroLink</h2>
+
+<p>
+
+Download the Android APK and explore how PhilanthroLink simplifies
+donation management through a secure and user-friendly platform.
+
+</p>
+
+<a href="PhilanthroLink.apk" download class="download-btn">
+
+<i class="fa-solid fa-download"></i>
+
+Download APK
+
+</a>
 
 </div>
 
@@ -446,9 +705,21 @@ Users leave reviews and improve transparency.
 
 <section id="developer">
 
-<h2>Developer</h2>
+<div class="developer">
 
-<div class="developer-card">
+<div class="developer-left">
+
+<div class="developer-icon">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+</div>
+
+</div>
+
+<div class="developer-right">
+
+<h2>Meet the Developer</h2>
 
 <h3>Prudhvi Prasad Sikharam</h3>
 
@@ -466,9 +737,13 @@ Texas A&M University–Corpus Christi
 
 <p>
 
-Android Application Developer
+PhilanthroLink was developed as part of the Android App Development
+course to demonstrate a complete Firebase-powered donation platform
+connecting NGOs and Volunteers through modern Android technologies.
 
 </p>
+
+</div>
 
 </div>
 
@@ -478,6 +753,8 @@ Android Application Developer
 
 <footer>
 
+<div class="footer-content">
+
 <h2>PhilanthroLink</h2>
 
 <p>
@@ -486,11 +763,33 @@ Connecting NGOs & Volunteers Through Technology
 
 </p>
 
-<p>
+<div class="footer-links">
+
+<a href="#about">About</a>
+
+<a href="#features">Features</a>
+
+<a href="#workflow">Workflow</a>
+
+<a href="#screenshots">Screenshots</a>
+
+</div>
+
+<p class="copyright">
 
 © 2026 PhilanthroLink
 
 </p>
+
+<p>
+
+Developed by
+
+<strong>Prudhvi Prasad Sikharam</strong>
+
+</p>
+
+</div>
 
 </footer>
 
